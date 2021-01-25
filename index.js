@@ -63,8 +63,8 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(){
-    const randomNum = Math.floor(Math.random() * 2)
-    return randomNum
+    // const randomNum = Math.floor(Math.random() * 2)
+    return Math.floor(Math.random() * 3)
 }
 inning()
 
@@ -84,9 +84,20 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(callback, num){
+  let homeScore = 0;
+  let awayScore = 0;
+    for (let i = 0; i < num.length; i++){
+      homeScore = callback() + homeScore,
+      awayScore = callback() + awayScore
+    }
+  return {
+    "Home": homeScore,
+    "Away": awayScore
+  }
 }
+
+finalScore(inning, 1)
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
@@ -139,8 +150,8 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(cb1, cd2, num) {
+  
 }
 
 
