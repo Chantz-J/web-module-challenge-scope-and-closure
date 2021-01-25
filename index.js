@@ -28,11 +28,16 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+      A: Counter 1 declares a variable in block scope and increments it with a closure. Counter 2 increments a variable found in global 
+      scope and simply returns it.
+
   2. Which of the two uses a closure? How can you tell?
-  
+    A: Counter 1 uses a closure. I know this because counter 1 declares a variable (count) that is unavailable anywhere else in the program.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+  A: Counter 1 would be better for coding a program that needed to keep track of changes/record of data. Counter 2 would be good for a file 
+  using the function performing a simple task or operation.
 */
 
 // counter1 code
